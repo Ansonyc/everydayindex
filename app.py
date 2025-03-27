@@ -8,6 +8,9 @@ app = Flask(__name__)
 def get_today_index_pb_pe_info():
     # 获取请求参数中的symbol
     symbol = request.args.get('symbol')
+    if symbol == None or len(symbol) == 0:
+        return 'symbol invalid'
+
     output_path = './data'
     if os.path.exists(output_path) == False:
         os.makedirs(output_path)
