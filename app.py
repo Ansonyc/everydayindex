@@ -1,8 +1,11 @@
 import sys
 from flask import Flask, request
+from flask_cors import CORS
 sys.path.append('./basic_option_functions')
 from basic_option_functions.fetch_etf_history import *
+
 app = Flask(__name__)
+CORS(app)  # 启用CORS支持
 
 @app.route('/', methods=['GET', 'POST'])
 def get_today_index_pb_pe_info():
