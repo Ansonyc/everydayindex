@@ -1,6 +1,6 @@
 Flask==2.0.1
 gunicorn==20.1.0
 Werkzeug==2.0.3  # 添加这一行来指定兼容版本
-akshare==1.15.54
+akshare==1.16.79
 mysql-connector-python==9.2.0
 pandas==2.2.2
